@@ -9,19 +9,19 @@ $aqua: #99CCFF;
 
 $font: 'Roboto', sans-serif;
 
-$themes: (
-  light: (
-    backgroundColor: $white,
-    textColor: $black,
-    buttonColor: $blue,
-    buttonTextColor: $aqua,
-    borderColor: $navy
-  ),
-  dark: (
+$light-theme: (
+  backgroundColor: $white,
+  textColor: $black,
+  buttonColor: $blue,
+  buttonTextColor: $aqua,
+  borderColor: $navy
+);
+
+
+$dark-theme: (
     backgroundColor: $black,
     textColor: $silver,
     buttonColor: $navy,
     buttonTextColor: $blue,
     borderColor: $gray
-  )
 );

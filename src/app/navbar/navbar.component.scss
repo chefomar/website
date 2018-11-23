@@ -1,28 +1,34 @@
 @import '../../theme';
 
+@import 'navbar.dark';
+@import 'navbar.light';
+
 .navbar {
+  display: flex;
   padding: 15px;
 
   &__title {
     font-family: $font;
     font-weight: bolder;
+    letter-spacing: 2px;
+  }
+
+  &__theme-btn {
+    border: none;
+    outline: none;
+    margin-left: auto;
+    align-self: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
   }
 }
 
 :host-context(.light-theme) {
-  $theme: map-get($map: $themes, $key: light);
-
-  .navbar {
-    background-color: map-get($map: $theme, $key: backgroundColor);
-    color: map-get($map: $theme, $key: textColor);
-  }
+  @include light-navbar;
 }
 
 :host-context(.dark-theme) {
-  $theme: map-get($map: $themes, $key: dark);
-
-  .navbar {
-    background-color: map-get($map: $theme, $key: backgroundColor);
-    color: map-get($map: $theme, $key: textColor);
-  }
+  @include dark-navbar;
 }

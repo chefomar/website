@@ -7,22 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'omar';
-  classes = {
-    'dark-theme': true,
-    'light-theme': false
-  };
+  isDarkTheme = false;
 
-  setDarkTheme() {
-    this.classes = {
-      'dark-theme': true,
-      'light-theme': false
-    };
+  get theme () {
+    return this.isDarkTheme ? 'dark-theme' : 'light-theme';
   }
 
-  setLightTheme() {
-    this.classes = {
-      'dark-theme': false,
-      'light-theme': true
-    };
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
   }
 }
