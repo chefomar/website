@@ -1,4 +1,5 @@
 @import '../../theme';
+@import '../../fonts';
 
 @import 'navbar.dark';
 @import 'navbar.light';
@@ -9,8 +10,9 @@
 
   &__title {
     font-family: $font;
-    font-weight: bolder;
+    font-weight: 900;
     letter-spacing: 2px;
+    @include fluid-type(300px, 1200px, 18px, 24px);
   }
 
   &__theme-btn {
@@ -18,8 +20,8 @@
     outline: none;
     margin-left: auto;
     align-self: center;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     cursor: pointer;
   }
