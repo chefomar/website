@@ -1,0 +1,15 @@
+@import 'home.dark';
+@import 'home.light';
+
+:host {
+  display: flex;
+  flex-grow: 1;
+}
+
+:host-context(.light-theme) {
+  @include light-home;
+}
+
+:host-context(.dark-theme) {
+  @include dark-home;
+}

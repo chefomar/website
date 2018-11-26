@@ -1,0 +1,6 @@
+@import '../../theme';
+
+@mixin light-home {
+  background-color: map-get($map: $light-theme, $key: backgroundColor);
+  color: map-get($map: $light-theme, $key: textColor);
+}
