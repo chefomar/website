@@ -1,0 +1,6 @@
+<h3 class="education__title">Education</h3>
+<div class="education__info" *ngFor="let education of educationData">
+  <h4 class="education__degree">{{ education.degree }}</h4>
+  <p class="education__university">{{ education.university }}</p>
+  <p class="education__year">Graduated {{ education.graduationYear }}</p>
+</div>

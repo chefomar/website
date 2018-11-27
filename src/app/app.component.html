@@ -2,3 +2,12 @@
   <app-navbar (themeChanged)="toggleTheme()"></app-navbar>
   <app-home></app-home>
 </div>
+
+<div class="container" [ngClass]="theme">
+  <app-education></app-education>
+  <app-experience></app-experience>
+</div>
+
+<div class="container" [ngClass]="theme">
+  <app-projects></app-projects>
+</div>
