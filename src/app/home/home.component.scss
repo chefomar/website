@@ -1,15 +1,38 @@
 @import 'home.dark';
 @import 'home.light';
 
+@import '../scss/fonts';
+
+@import '../scss/section/section';
+
 :host {
-  display: flex;
-  flex-grow: 1;
+  @include section;
 }
 
 :host-context(.light-theme) {
-  @include light-home;
+  @include light-section;
 }
 
 :host-context(.dark-theme) {
-  @include dark-home;
+  @include dark-section;
+}
+
+.home__name {
+  margin: 0;
+  font-family: $font;
+  font-weight: 900;
+  @include fluid-type(300px, 1200px, 40px, 120px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.home__title {
+  margin: 0;
+  font-family: $font;
+  font-weight: 800;
+  @include fluid-type(300px, 1200px, 35px, 110px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
 }
