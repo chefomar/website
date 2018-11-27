@@ -9,7 +9,7 @@
 
   &__title {
     font-family: $font;
-    font-weight: 900;
+    font-weight: map-get($map: $font-weights, $key: black);
     letter-spacing: 2px;
     @include fluid-type(300px, 1200px, 18px, 24px);
   }
