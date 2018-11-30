@@ -1,0 +1,38 @@
+@import '../scss/fonts';
+
+@import '../scss/section/section';
+
+:host {
+  @include section;
+  align-content: center;
+}
+
+:host-context(.light-theme) {
+  @include light-section;
+}
+
+:host-context(.dark-theme) {
+  @include dark-section;
+}
+
+.contact__title {
+  @include section__title;
+}
+
+.social__group {
+  text-align: center;
+  padding: 10px;
+
+  .social__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    font-family: $font;
+    @include fluid-type(300px, 1200px, 20px, 40px);
+    margin: 0 10px;
+
+    .social__hidden-text {
+      display: none;
+    }
+  }
+}
