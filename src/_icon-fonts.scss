@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'social-icons';
-  src: url('assets/icon-fonts/social-icons.eot?84074923');
-  src: url('assets/icon-fonts/social-icons.eot?84074923#iefix')
+  src: url('./icon-fonts/social-icons.eot?84074923');
+  src: url('./icon-fonts/social-icons.eot?84074923#iefix')
       format('embedded-opentype'),
-    url('assets/icon-fonts/social-icons.woff2?84074923') format('woff2'),
-    url('assets/icon-fonts/social-icons.woff?84074923') format('woff'),
-    url('assets/icon-fonts/social-icons.ttf?84074923') format('truetype'),
-    url('assets/icon-fonts/social-icons.svg?84074923#social-icons') format('svg');
+    url('./icon-fonts/social-icons.woff2?84074923') format('woff2'),
+    url('./icon-fonts/social-icons.woff?84074923') format('woff'),
+    url('./icon-fonts/social-icons.ttf?84074923') format('truetype'),
+    url('./icon-fonts/social-icons.svg?84074923#social-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
