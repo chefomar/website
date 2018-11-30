@@ -1,11 +1,25 @@
 @import 'section.dark';
 @import 'section.light';
 
-
 @mixin section {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: center;
-    padding: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 5px;
+}
+
+@mixin section__title {
+  font-family: $font;
+  @include fluid-type(300px, 1200px, 20px, 40px);
+  font-weight: map-get($map: $font-weights, $key: black);
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 10px;
+}
+
+@mixin section__subtitle {
+  @include fluid-type(300px, 1200px, 20px, 40px);
+  font-weight: map-get($map: $font-weights, $key: bold);
+  margin: 5px;
 }

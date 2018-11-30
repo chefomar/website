@@ -15,12 +15,7 @@
 }
 
 .experience__title {
-  font-family: $font;
-  @include fluid-type(300px, 1200px, 20px, 40px);
-  font-weight: map-get($map: $font-weights, $key: black);
-  text-align: center;
-  letter-spacing: 1px;
-  margin: 10px;
+  @include section__title;
 }
 
 .experience__info {
@@ -29,9 +24,7 @@
   padding: 5px;
 
   .experience__job {
-    @include fluid-type(300px, 1200px, 20px, 40px);
-    font-weight: map-get($map: $font-weights, $key: bold);
-    margin: 5px;
+    @include section__subtitle;
   }
 
   .experience__workplace {
