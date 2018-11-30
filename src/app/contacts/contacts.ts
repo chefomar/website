@@ -5,6 +5,11 @@ export const contacts = [
     type: 'twitter'
   },
   {
+    link: 'https://www.linkedin.com/in/omarelshinnawey',
+    name: '@omarelshinnawey',
+    type: 'linkedin'
+  },
+  {
     link: 'https://github.com/chefomar',
     name: '@chefomar',
     type: 'github'
@@ -15,7 +20,7 @@ export const contacts = [
     type: 'stackoverflow'
   },
   {
-    link: 'https://www.linkedin.com/in/omarelshinnawey',
+    link: 'mailto:elshinnaweyom@gmail.com',
     name: 'elshinnaweyom@gmail.com',
     type: 'mail'
   }
