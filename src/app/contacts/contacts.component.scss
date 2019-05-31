@@ -1,24 +1,5 @@
 @import '../scss/fonts';
 
-@import '../scss/section/section';
-
-:host {
-  @include section;
-  align-content: center;
-}
-
-:host-context(.light-theme) {
-  @include light-section;
-}
-
-:host-context(.dark-theme) {
-  @include dark-section;
-}
-
-.contact__title {
-  @include section__title;
-}
-
 .social__group {
   text-align: center;
   padding: 10px;

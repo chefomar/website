@@ -1,0 +1,10 @@
+@import '~src/app/scss/theme';
+
+.card__link {
+  color: $blue;
+  text-transform: capitalize;
+
+  &:hover {
+    color: $light-blue;
+  }
+}

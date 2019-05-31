@@ -4,23 +4,23 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { ExperienceComponent } from './experience/experience.component';
-import { EducationComponent } from './education/education.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { ContainerComponent } from './container/container.component';
+import { CardModule } from './card/card.module';
+import { SectionComponent } from './section/section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ExperienceComponent,
-    EducationComponent,
-    ProjectsComponent,
     ContactsComponent,
+    ContainerComponent,
+    SectionComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

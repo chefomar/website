@@ -1,9 +1,0 @@
-<h3 class="projects__title">Projects</h3>
-<div class="project" *ngFor="let project of projectsData">
-    <h4 class="project__title">{{project.title}}</h4>
-    <p class="project__description">{{project.description}}</p>
-    <div class="project__links">
-      <a *ngIf="project.npmLink" class="project__link" rel="nofollow" [href]="project.npmLink">See NPM Package</a>
-      <a *ngIf="project.githubLink" class="project__link" rel="nofollow" [href]="project.githubLink">See Github Repository</a>
-    </div>
-</div>

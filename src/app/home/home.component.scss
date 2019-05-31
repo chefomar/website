@@ -1,35 +1,13 @@
 @import '../scss/fonts';
 
-@import '../scss/section/section';
-
 :host {
-  @include section;
-}
-
-:host-context(.light-theme) {
-  @include light-section;
-}
-
-:host-context(.dark-theme) {
-  @include dark-section;
+  padding: 10px;
 }
 
 .home__name {
-  margin: 0;
-  font-family: $font;
-  font-weight: map-get($map: $font-weights, $key: black);
-  @include fluid-type(300px, 1200px, 40px, 120px);
-  text-transform: uppercase;
-  letter-spacing: 2px;
   text-align: center;
 }
 
 .home__title {
-  margin: 0;
-  font-family: $font;
-  font-weight: map-get($map: $font-weights, $key: extra-bold);
-  @include fluid-type(300px, 1200px, 35px, 110px);
-  text-transform: uppercase;
-  letter-spacing: 2px;
   text-align: center;
 }

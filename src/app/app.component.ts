@@ -1,27 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { UserPrefrencesService } from './user-prefrences.service';
+import { Component } from '@angular/core';
+import { educationCards, experienceCards, projectCards } from './models/cards';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'omar';
-  isDarkTheme = true;
-
-  constructor(private userPrefremcesService: UserPrefrencesService) {}
-
-  ngOnInit() {
-    this.isDarkTheme = this.userPrefremcesService.getThemePrefrence();
-  }
-
-  get theme () {
-    return this.isDarkTheme ? 'dark-theme' : 'light-theme';
-  }
-
-  toggleTheme() {
-    this.isDarkTheme = !this.isDarkTheme;
-    this.userPrefremcesService.saveThemePrefrence(this.isDarkTheme);
-  }
+  readonly education = educationCards;
+  readonly experience = experienceCards;
+  readonly projects = projectCards;
 }

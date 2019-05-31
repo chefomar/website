@@ -1,17 +1,16 @@
-<div class="container" [ngClass]="theme">
-  <app-navbar (themeChanged)="toggleTheme()"></app-navbar>
-  <app-home></app-home>
-</div>
+<app-container>
+  <app-navbar></app-navbar>
+  <app-section>
+    <app-home></app-home>
+    <app-contacts></app-contacts>
+  </app-section>
+</app-container>
 
-<div class="container" [ngClass]="theme">
-  <app-education></app-education>
-  <app-experience></app-experience>
-</div>
+<app-container>
+  <app-section title="education" [cards]="education"></app-section>
+  <app-section title="experience" [cards]="experience"></app-section>
+</app-container>
 
-<div class="container" [ngClass]="theme">
-  <app-projects></app-projects>
-</div>
-
-<div class="container" [ngClass]="theme">
-  <app-contacts></app-contacts>
-</div>
+<app-container>
+  <app-section title="projects" [cards]="projects"></app-section>
+</app-container>

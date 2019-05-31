@@ -1,0 +1,11 @@
+<h3 *ngIf="title" class="section__title heading heading-3">{{ title }}</h3>
+<app-card-container>
+  <app-card *ngFor="let card of cards">
+    <app-card-title>{{ card.title }}</app-card-title>
+    <app-card-content>
+      <p *ngFor="let contentLine of card.contentLines">{{ contentLine }}</p>
+    </app-card-content>
+    <app-card-link *ngFor="let link of card.links" [href]="link.target">{{ link.text }}</app-card-link>
+  </app-card>
+</app-card-container>
+<ng-content></ng-content>
