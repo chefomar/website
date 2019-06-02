@@ -1,1 +1,7 @@
+:host {
+  display: block;
 
+  & > *:last-child {
+    padding-bottom: 45px;
+  }
+}

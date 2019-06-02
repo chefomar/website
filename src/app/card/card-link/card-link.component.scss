@@ -1,10 +1,18 @@
 @import '~src/app/scss/theme';
 
-.card__link {
-  color: $blue;
-  text-transform: capitalize;
+:host {
+  display: flex;
+
+  .card__link {
+    border: 2px solid $navy;
+    padding: 5px;
+    margin: 5px;
+    color: $navy;
+    text-decoration: none;
+  }
 
   &:hover {
-    color: $light-blue;
+    color: $black;
+    border-color: $black;
   }
 }

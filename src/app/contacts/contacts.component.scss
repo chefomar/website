@@ -1,23 +1,18 @@
-@import '../scss/fonts';
-
-.social__group {
+:host {
   text-align: center;
   padding: 10px;
+}
 
-  .social__link {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: inherit;
-    font-family: $font;
-    @include fluid-type(300px, 1200px, 20px, 40px);
-    margin: 0 10px;
+.social__link {
+  text-decoration: none;
+  color: black;
+  margin: 0 10px;
+}
 
-    .social__hidden-text {
-      clip: rect(0 0 0 0);
-      overflow: hidden;
-      position: absolute;
-      height: 1px;
-      width: 1px;
-    }
-  }
+.social__text {
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    position: absolute;
+    height: 1px;
+    width: 1px;
 }

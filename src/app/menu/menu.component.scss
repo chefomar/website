@@ -1,0 +1,99 @@
+@import '../scss/theme';
+@import '../scss/fonts';
+
+:host {
+  width: 100vw;
+  height: 45px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-top: 1px solid $gray;
+  z-index: 1;
+  font-family: $font;
+  background-color: $white;
+}
+
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  &__item {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &::after {
+      content: '';
+      border-bottom: 3px solid $navy;
+      margin-top: 2px;
+      transform: scaleX(0);
+      transition: transform 150ms ease-in-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+
+    &--active {
+      font-weight: bold;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__link {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  :host {
+    width: 15vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-top: none;
+  }
+
+  .menu {
+    flex-direction: column;
+
+    &__item {
+      text-align: right;
+      padding: 5px 0;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+
+      &::after {
+        border: none;
+        margin: 5px 0 5px 5px;
+        transform: none;
+        transition: width 150ms ease-in-out;
+        width: 15px;
+        height: 2px;
+        background-color: $navy;
+      }
+
+      &:hover::after {
+        width: 30px;
+      }
+
+      &--active::after {
+        width: 30px;
+      }
+    }
+  }
+}

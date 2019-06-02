@@ -14,7 +14,7 @@ body {
 }
 
 .heading {
-  margin: 0;
+  margin: 10px;
   font-family: $font;
   text-transform: capitalize;
   letter-spacing: 2px;
@@ -41,5 +41,21 @@ body {
 
   &--center {
     text-align: center;
+  }
+
+  &--underlined {
+    margin-bottom: 20px;
+
+    &::after {
+      content: '';
+      display: block;
+      margin: 5px auto;
+      width: 5%;
+      border-bottom: 3px solid black;
+    }
+  }
+
+  &--no-margin {
+    margin: 0;
   }
 }
