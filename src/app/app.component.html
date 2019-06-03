@@ -1,7 +1,9 @@
 <app-menu></app-menu>
-<app-home></app-home>
+<main>
+  <app-home appSpyTarget="home" id="home"></app-home>
 
-<app-container>
-  <app-about></app-about>
-  <app-projects></app-projects>
-</app-container>
+  <app-container>
+    <app-about appSpyTarget="about" id="about"></app-about>
+    <app-projects appSpyTarget="projects" id="projects"></app-projects>
+  </app-container>
+</main>

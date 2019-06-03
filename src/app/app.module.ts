@@ -6,10 +6,11 @@ import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ContainerComponent } from './container/container.component';
 import { CardModule } from './card/card.module';
-import { SectionComponent } from './section/section.component';
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { SpyTargetDirective } from './spy-target.directive';
+import { SpyOnDirective } from './spy-on.directive';
 
 @NgModule({
   declarations: [
@@ -17,10 +18,11 @@ import { ProjectsComponent } from './projects/projects.component';
     HomeComponent,
     ContactsComponent,
     ContainerComponent,
-    SectionComponent,
     MenuComponent,
     AboutComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    SpyTargetDirective,
+    SpyOnDirective
   ],
   imports: [BrowserModule, CardModule],
   providers: [],
