@@ -1,0 +1,22 @@
+@import '~src/app/scss/variables';
+@import '~src/app/scss/mixins';
+
+:host {
+  display: flex;
+  margin-right: 5px;
+
+  .card__link {
+    border: 2px solid $black;
+    padding: 5px;
+    color: $black;
+    font-family: $font;
+    text-decoration: none;
+  }
+
+  @include supports-hover {
+    &:hover {
+      color: $navy;
+      border-color: $navy;
+    }
+  }
+}

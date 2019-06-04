@@ -1,0 +1,19 @@
+@import '../scss/mixins';
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: auto;
+  padding: 10px;
+
+  &[justify="center"] {
+    justify-content: center;
+  }
+}
+
+@include large {
+  :host {
+    padding-bottom: 0;
+    width: 70vw;
+  }
+}

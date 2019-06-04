@@ -1,6 +1,0 @@
-@import '../theme';
-
-@mixin dark-section {
-  background-color: map-get($map: $dark-theme, $key: backgroundColor);
-  color: map-get($map: $dark-theme, $key: textColor);
-}

@@ -1,27 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { UserPrefrencesService } from './user-prefrences.service';
+import { Component, AfterViewInit } from '@angular/core';
+import { ScrollSpyService } from './services/scroll-spy.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  title = 'omar';
-  isDarkTheme = true;
+export class AppComponent implements AfterViewInit{
 
-  constructor(private userPrefremcesService: UserPrefrencesService) {}
+  constructor(private spyService: ScrollSpyService) {}
 
-  ngOnInit() {
-    this.isDarkTheme = this.userPrefremcesService.getThemePrefrence();
-  }
-
-  get theme () {
-    return this.isDarkTheme ? 'dark-theme' : 'light-theme';
-  }
-
-  toggleTheme() {
-    this.isDarkTheme = !this.isDarkTheme;
-    this.userPrefremcesService.saveThemePrefrence(this.isDarkTheme);
+  ngAfterViewInit() {
+    this.spyService.spy();
   }
 }

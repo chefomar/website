@@ -1,7 +1,24 @@
-<h3 class="contact__title">Contact Me</h3>
-<div class="social__group">
-  <a *ngFor="let contact of contactsData" class="social__link" [href]="contact.link">
-    <span class="social__hidden-text">{{contact.name}}</span>
-    <i class="icon-{{contact.type}}"></i>
-  </a>
-</div>
+<a class="social__link" href="https://twitter.com/OmarAlShinnawey">
+  <span class="social__text">twitter</span>
+  <app-twitter></app-twitter>
+</a>
+
+<a class="social__link" href="https://www.linkedin.com/in/omarelshinnawey">
+  <span class="social__text">linkedin</span>
+  <app-linkedin></app-linkedin>
+</a>
+
+<a class="social__link" href="https://github.com/chefomar">
+  <span class="social__text">github</span>
+  <app-github></app-github>
+</a>
+
+<a class="social__link" href="https://stackoverflow.com/users/6152831/omar">
+  <span class="social__text">stackoverflow</span>
+  <app-stackoverflow></app-stackoverflow>
+</a>
+
+<a class="social__link" href="mailto:elshinnaweyom@gmail.com">
+  <span class="social__text">email</span>
+  <app-email></app-email>
+</a>

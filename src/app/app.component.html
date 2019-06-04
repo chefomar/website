@@ -1,17 +1,9 @@
-<div class="container" [ngClass]="theme">
-  <app-navbar (themeChanged)="toggleTheme()"></app-navbar>
-  <app-home></app-home>
-</div>
+<app-menu></app-menu>
+<main>
+  <app-home appSpyTarget="home"></app-home>
 
-<div class="container" [ngClass]="theme">
-  <app-education></app-education>
-  <app-experience></app-experience>
-</div>
-
-<div class="container" [ngClass]="theme">
-  <app-projects></app-projects>
-</div>
-
-<div class="container" [ngClass]="theme">
-  <app-contacts></app-contacts>
-</div>
+  <app-container>
+    <app-about appSpyTarget="about"></app-about>
+    <app-projects appSpyTarget="projects"></app-projects>
+  </app-container>
+</main>

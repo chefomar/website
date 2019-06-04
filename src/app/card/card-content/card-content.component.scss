@@ -1,0 +1,7 @@
+@import '~src/app/scss/variables';
+
+:host {
+  font-family: $font;
+  font-weight: map-get($map: $font-weights, $key: normal);
+  font-size: 0.8rem;
+}

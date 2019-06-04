@@ -1,9 +1,24 @@
-<h3 class="projects__title">Projects</h3>
-<div class="project" *ngFor="let project of projectsData">
-    <h4 class="project__title">{{project.title}}</h4>
-    <p class="project__description">{{project.description}}</p>
-    <div class="project__links">
-      <a *ngIf="project.npmLink" class="project__link" rel="nofollow" [href]="project.npmLink">See NPM Package</a>
-      <a *ngIf="project.githubLink" class="project__link" rel="nofollow" [href]="project.githubLink">See Github Repository</a>
-    </div>
-</div>
+<h3 class="heading heading--underlined heading--center heading--3">Projects</h3>
+<app-card-container>
+  <app-card>
+    <app-card-title>Optionull</app-card-title>
+    <app-card-content>
+      <p>An implementation for the nullable design pattern in javascript</p>
+    </app-card-content>
+    <app-card-links>
+      <app-card-link href="https://github.com/chefomar/optionull">Github</app-card-link>
+      <app-card-link href="https://www.npmjs.com/package/optionull">npm</app-card-link>
+    </app-card-links>
+  </app-card>
+
+  <app-card>
+    <app-card-title>ts-lint-no-data</app-card-title>
+    <app-card-content>
+      <p>TSLint rules to prevent usage of the word "data" in variables and function names</p>
+    </app-card-content>
+    <app-card-links>
+      <app-card-link href="https://github.com/chefomar/no-data">Github</app-card-link>
+      <app-card-link href="https://www.npmjs.com/package/tslint-no-data">npm</app-card-link>
+    </app-card-links>
+  </app-card>
+</app-card-container>

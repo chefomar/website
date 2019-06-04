@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { projects } from './projects';
 
 @Component({
   selector: 'app-projects',
@@ -7,7 +6,6 @@ import { projects } from './projects';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  readonly projectsData = projects;
 
   constructor() { }
 
