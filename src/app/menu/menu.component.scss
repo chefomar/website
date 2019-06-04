@@ -1,5 +1,5 @@
-@import '../scss/theme';
-@import '../scss/fonts';
+@import '../scss/variables';
+@import '../scss/mixins';
 
 :host {
   width: 100vw;
@@ -27,17 +27,20 @@
     flex-direction: column;
     color: black;
     text-decoration: none;
+    font-size: 0.8rem;
 
     &::after {
       content: '';
-      border-bottom: 3px solid $navy;
+      border-bottom: 3px solid $black;
       margin-top: 2px;
       transform: scaleX(0);
       transition: transform 150ms ease-in-out;
     }
 
-    &:hover::after, &:focus::after {
-      transform: scaleX(1);
+    @include supports-hover {
+      &:hover::after, &:focus::after {
+        transform: scaleX(1);
+      }
     }
 
     &--active {
@@ -50,7 +53,7 @@
   }
 }
 
-@media only screen and (min-width: 700px) {
+@include large {
   :host {
     width: 15vw;
     height: 100vh;
@@ -80,7 +83,7 @@
         transition: width 150ms ease-in-out;
         width: 15px;
         height: 2px;
-        background-color: $navy;
+        background-color: $black;
       }
 
       &:hover::after, &:focus::after {

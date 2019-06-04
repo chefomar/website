@@ -1,19 +1,16 @@
-import { Component, ViewChildren, AfterViewInit, QueryList } from '@angular/core';
-import { SpyTargetDirective } from './spy-target.directive';
-import { ScrollSpyService } from './scroll-spy.service';
+import { Component, AfterViewInit } from '@angular/core';
+import { ScrollSpyService } from './services/scroll-spy.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
-
-  @ViewChildren(SpyTargetDirective) private spyTargets: QueryList<SpyTargetDirective>;
+export class AppComponent implements AfterViewInit{
 
   constructor(private spyService: ScrollSpyService) {}
 
   ngAfterViewInit() {
-    this.spyService.spy(this.spyTargets.toArray());
+    this.spyService.spy();
   }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { SpyTargetDirective } from './spy-target.directive';
+import { SpyTargetDirective } from '../directives/spy-target.directive';
 import { fromEvent, Subject } from 'rxjs';
 import { auditTime, takeUntil } from 'rxjs/operators';
 
@@ -14,19 +14,18 @@ export class ScrollSpyService {
   private resizeEvent = fromEvent(window, 'resize', { passive: true }).pipe(auditTime(300), takeUntil(this.stopSpying$));
   private spyTargets: SpyTargetDirective[] = [];
 
-  constructor() { }
+  constructor() {
+  }
 
-  spy(spyTargets: SpyTargetDirective[]) {
-    if (this.spyTargets.length === 0 && spyTargets && spyTargets.length > 0) {
-      this.spyTargets = spyTargets;
-
+  spy() {
       this.scrollEvent.subscribe(() => this.handleEvents());
       this.resizeEvent.subscribe(() => this.handleEvents());
 
       this.handleEvents();
+  }
 
-      return this.activeSpyTarget$.asObservable();
-    }
+  addTarget(target: SpyTargetDirective) {
+    this.spyTargets.push(target);
   }
 
   handleEvents() {
@@ -43,7 +42,7 @@ export class ScrollSpyService {
     const scrollTop = this.scrollTop;
     const viewportHeight = this.viewportHeight;
 
-    return targetOffsetTop + targetHeight >= scrollTop && targetOffsetTop <= scrollTop + viewportHeight;
+    return targetOffsetTop + targetHeight >= scrollTop && targetOffsetTop <= scrollTop + viewportHeight - 45;
   }
 
   get scrollTop() {

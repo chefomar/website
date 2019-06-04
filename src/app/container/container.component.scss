@@ -1,3 +1,4 @@
+@import '../scss/mixins';
 :host {
   display: flex;
   flex-direction: column;
@@ -10,7 +11,7 @@
   }
 }
 
-@media only screen and (min-width: 700px) {
+@include large {
   :host {
     padding-bottom: 0;
     width: 70vw;

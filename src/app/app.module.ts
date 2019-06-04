@@ -9,8 +9,9 @@ import { CardModule } from './card/card.module';
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { SpyTargetDirective } from './spy-target.directive';
-import { SpyOnDirective } from './spy-on.directive';
+import { SpyTargetDirective } from './directives/spy-target.directive';
+import { SpyOnDirective } from './directives/spy-on.directive';
+import { SocialIconsModule } from './social-icons/social-icons.module';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,9 @@ import { SpyOnDirective } from './spy-on.directive';
     AboutComponent,
     ProjectsComponent,
     SpyTargetDirective,
-    SpyOnDirective
+    SpyOnDirective,
   ],
-  imports: [BrowserModule, CardModule],
+  imports: [BrowserModule, CardModule, SocialIconsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Renderer2, Input, OnInit } from '@angular/core';
-import { ScrollSpyService } from './scroll-spy.service';
+import { ScrollSpyService } from '../services/scroll-spy.service';
 
 @Directive({
   selector: '[appSpyOn]'
