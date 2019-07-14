@@ -5,6 +5,6 @@ import { Component, Input } from '@angular/core';
   templateUrl: './card-link.component.html',
   styleUrls: ['./card-link.component.scss']
 })
-export class CardLinkComponent{
+export class CardLinkComponent {
   @Input() href: string;
 }
