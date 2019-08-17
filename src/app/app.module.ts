@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ScrollSpyModule } from 'ng-spy';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -9,8 +10,6 @@ import { CardModule } from './card/card.module';
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { SpyTargetDirective } from './directives/spy-target.directive';
-import { SpyOnDirective } from './directives/spy-on.directive';
 import { SocialIconsModule } from './social-icons/social-icons.module';
 
 @NgModule({
@@ -22,10 +21,8 @@ import { SocialIconsModule } from './social-icons/social-icons.module';
     MenuComponent,
     AboutComponent,
     ProjectsComponent,
-    SpyTargetDirective,
-    SpyOnDirective,
   ],
-  imports: [BrowserModule, CardModule, SocialIconsModule],
+  imports: [BrowserModule, CardModule, SocialIconsModule, ScrollSpyModule],
   providers: [],
   bootstrap: [AppComponent]
 })
